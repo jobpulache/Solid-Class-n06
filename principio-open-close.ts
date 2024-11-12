@@ -11,3 +11,29 @@ class DescuentoConcierto {
         }
     }
 }
+
+abstract class EstrategiaDescuento {
+    abstract calcular(monto: number): number
+}
+class ClienteRegularDescuento extends EstrategiaDescuento {
+    calcular(monto: number): number {
+        return monto * 0.1
+    }
+}
+class ClienteVIPDescuento extends EstrategiaDescuento {
+    calcular(monto: number): number {
+        return monto * 0.2
+    }
+}
+class CalcularDescuento{
+    private estrategiaDescuento: EstrategiaDescuento
+    constructor(estrategia: EstrategiaDescuento){
+        this.estrategiaDescuento = estrategia
+    }
+    calcular(monto:number):number{
+        return this.estrategiaDescuento.calcular(monto)
+    }
+
+}
+const descRegular =new CalcularDescuento(new ClienteRegularDescuento())
+console.log("Descuento regular", descRegular.calcular(100));
