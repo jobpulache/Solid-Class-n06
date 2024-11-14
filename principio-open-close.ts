@@ -37,3 +37,4 @@ class CalcularDescuento{
 }
 const descRegular =new CalcularDescuento(new ClienteRegularDescuento())
 console.log("Descuento regular", descRegular.calcular(100));
+
