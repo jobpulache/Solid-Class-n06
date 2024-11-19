@@ -17,12 +17,12 @@ class ReportSender{
     }
 }
 
+
 class cargarDatos{
     cargarData(tipoDate:string){
         console.log(tipoDate);      
     }   
 }
-
 class generarDatos{
 generarDato(generateData:string){
     console.log(`generando dato ${generateData}`);
@@ -33,5 +33,24 @@ class guardarDatos{
     guardarData(saveData:string){
         console.log('Guardando datos');      
     }
+}
 
+
+
+
+
+
+class Reporte{
+    
+}
+class generarPDF{
+generarPdf(generatePdf:string){
+    console.log(`generando pdf ${generatePdf}..`);
+}
+
+}
+class enviarEmail{
+    enviarEmail(enviarEmail:string){
+        console.log(`enviando email ${enviarEmail}`);      
+    }
 }
